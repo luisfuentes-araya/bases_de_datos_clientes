@@ -1,5 +1,15 @@
 
--- ============================================
+-- ===========| #  | Concepto        | Qué hace                         | Ejemplo                                   | Para qué sirve                              |
+--| -- | --------------- | -------------------------------- | ----------------------------------------- | ------------------------------------------- |
+--| 50 | INNER JOIN      | Solo coincidencias en AMBAS      | cliente INNER JOIN tipo_prevision         | Clientes con su tipo de previsión           |
+--| 51 | LEFT JOIN       | Todos de izq + coincidencias der | cliente LEFT JOIN afiliacion              | Todos los clientes, incluso sin afiliación  |
+--| 52 | RIGHT JOIN      | Todos de der + coincidencias izq | cliente RIGHT JOIN tipo_prevision         | Todas las previsiones, incluso sin clientes |
+--| 53 | Múltiples JOINs | Unir 3+ tablas                   | cliente → comuna → región                 | Obtener comuna y región juntas              |
+--| 54 | JOIN + WHERE    | Filtrar después de unir          | JOIN ... WHERE región = 'Metropolitana'   | Solo clientes de una región                 |
+--| 55 | JOIN + GROUP BY | Agrupar datos unidos             | JOIN ... GROUP BY región                  | Contar clientes por región                  |
+--| 56 | JOIN + HAVING   | Filtrar grupos unidos            | JOIN ... GROUP BY ... HAVING COUNT(*) > 5 | Regiones con más de 5 clientes              |
+--| 57 | JOIN + CASE     | Lógica condicional en JOIN       | LEFT JOIN ... CASE WHEN ... THEN ... END  | Marcar si tiene afiliación o no             |
+--| 58 | GROUP_CONCAT()  | Concatenar valores en grupo      | GROUP_CONCAT(afiliación SEPARATOR ', ')   | Lista de afiliaciones en 1 fila             |=================================
 -- PARTE 4: JOINs (INNER, LEFT, RIGHT múltiple)
 -- ============================================
 
