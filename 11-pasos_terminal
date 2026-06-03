@@ -1,0 +1,37 @@
+hacer esto en git
+1. Crear carpeta del proyecto en tu PC
+mkdir base-datos-clientes-previsional
+cd base-datos-clientes-previsional
+
+# 2. Crear estructura de carpetas
+mkdir 01-creacion-tablas
+mkdir 02-insert-datos
+mkdir 03-select-basico
+mkdir 04-joins
+mkdir 05-subconsultas
+mkdir 06-procedimientos
+mkdir 07-funciones
+mkdir 08-triggers
+mkdir 09-excepciones
+mkdir 10-indices
+mkdir 99-documentacion
+
+# 3. Crear archivos SQL en cada carpeta
+touch 01-creacion-tablas/creacion_tablas.sql
+touch 02-insert-datos/insert_clientes.sql
+# ... etc
+
+# 4. Inicializar Git
+git init
+
+# 5. Agregar todos los archivos
+git add .
+
+# 6. Commit inicial
+git commit -m "Initial commit: Estructura proyecto SQL Clientes AFP/Fonasa/Isapre"
+
+# 7. Vincular con GitHub (copia la URL de tu repositorio)
+git remote add origin https://github.com/TU_USUARIO/base-datos-clientes-previsional.git
+
+# 8. Subir a GitHub
+git push -u origin main
