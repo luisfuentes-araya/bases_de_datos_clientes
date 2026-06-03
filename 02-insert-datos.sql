@@ -1,4 +1,12 @@
-
+--| #  | Concepto         | Qué hace                | Ejemplo                                       | Para qué sirve                    |
+--| -- | ---------------- | ----------------------- | --------------------------------------------- | --------------------------------- |
+--| 15 | INSERT INTO      | Agrega registros        | INSERT INTO cliente VALUES (...);             | Cargar datos en tablas            |
+--| 16 | INSERT múltiple  | Varias filas en 1 query | INSERT INTO tabla VALUES (...), (...), (...); | Insertar 30 clientes en 1 comando |
+--| 17 | STRINGS          | Textos con comillas     | 'Juan Pérez', '+56912345678'                  | Datos de texto                    |
+--| 18 | DATE             | Formato YYYY-MM-DD      | '1985-03-15'                                  | Fechas de nacimiento, registro    |
+--| 19 | BOOLEAN          | TRUE/FALSE              | activo = TRUE                                 | Estado activo/inactivo            |
+--| 20 | DECIMAL          | Números con decimales   | salario_uf DECIMAL(10,2)                      | Salarios con 2 decimales (UF)     |
+--| 21 | SELECT 'mensaje' | Mostrar información     | SELECT '✅ Insertado' AS mensaje;              | Confirmar operaciones             |
 -- ============================================
 -- PARTE 2: INSERTAR DATOS
 -- ============================================
