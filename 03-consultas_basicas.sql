@@ -1,4 +1,33 @@
-
+--| #  | Concepto                   | Qué hace                                 | Ejemplo                                           | Para qué sirve                       |
+--| -- | -------------------------- | ---------------------------------------- | ------------------------------------------------- | ------------------------------------ |
+--| 22 | SELECT                     | Ver datos                                | SELECT rut, nombre FROM cliente;                  | Consultar columnas específicas       |
+--| 23 | SELECT *                   | Todas las columnas                       | SELECT * FROM cliente;                            | Ver todo el registro                 |
+--| 24 | AS (alias)                 | Nombre temporal                          | SELECT nombre AS "Nombre Completo";               | Nombres más legibles en resultados   |
+--| 25 | CONCAT()                   | Unir textos                              | CONCAT(nombre, ' ', apellido)                     | Crear nombre completo                |
+--| 26 | WHERE                      | Filtrar filas                            | WHERE salario_uf > 30;                            | Solo registros que cumplen condición |
+--| 27 | AND                        | Todas las condiciones verdaderas         | WHERE tipo = 1 AND activo = TRUE                  | Múltiples filtros juntos             |
+--| 28 | OR                         | Al menos una condición verdadera         | WHERE tipo = 2 OR tipo = 3                        | Filtrar por varios valores           |
+--| 29 | NOT                        | Negar condición                          | WHERE tipo != 1                                   | Excluir valores                      |
+--| 30 | BETWEEN                    | Rango de valores                         | WHERE salario BETWEEN 30 AND 45                   | Rango numérico o de fecha            |
+--| 31 | IN                         | Lista de valores                         | WHERE id_comuna IN (1, 2, 3)                      | Múltiples valores específicos        |
+--| 32 | LIKE                       | Patrón de texto                          | WHERE nombre LIKE 'J%'                            | Búsqueda por patrón (J*)             |
+--| 33 | IS NULL                    | Valor nulo                               | WHERE apellido_materno IS NULL                    | Campos vacíos                        |
+--| 34 | IS NOT NULL                | Valor no nulo                            | WHERE email IS NOT NULL                           | Campos con datos                     |
+--| 35 | ORDER BY ASC               | Orden ascendente                         | ORDER BY salario_uf ASC                           | Del menor al mayor                   |
+--| 36 | ORDER BY DESC              | Orden descendente                        | ORDER BY salario_uf DESC                          | Del mayor al menor                   |
+--| 37 | ORDER BY múltiple          | Orden por varias columnas                | ORDER BY tipo ASC, salario DESC                   | Primero por tipo, luego por salario  |
+--| 38 | LIMIT                      | Limitar resultados                       | LIMIT 10                                          | Solo los primeros 10 registros       |
+--| 39 | LIMIT OFFSET               | Paginación                               | LIMIT 10 OFFSET 5                                 | Mostrar página 2 (saltar 5)          |
+--| 40 | GROUP BY                   | Agrupar por columna                      | GROUP BY id_tipo_prev                             | Agrupar para agregar                 |
+--| 41 | COUNT(*)                   | Contar filas                             | COUNT(*) AS total                                 | Número de registros por grupo        |
+--| 42 | SUM()                      | Sumar valores                            | SUM(salario_uf)                                   | Total de salarios                    |
+--| 43 | AVG()                      | Promedio                                 | AVG(salario_uf)                                   | Salario promedio                     |
+--| 44 | MIN()                      | Valor mínimo                             | MIN(salario_uf)                                   | Salario más bajo                     |
+--| 45 | MAX()                      | Valor máximo                             | MAX(salario_uf)                                   | Salario más alto                     |
+--| 46 | HAVING                     | Filtrar grupos                           | HAVING COUNT(*) > 5                               | Grupos con más de 5 clientes         |
+--| 47 | Diferencia WHERE vs HAVING | WHERE filtra filas, HAVING filtra grupos | WHERE activo=TRUE GROUP BY tipo HAVING COUNT(*)>5 | Filtrar antes y después de agrupar   |
+--| 48 | CASE                       | Condicional en SELECT                    | CASE WHEN salario > 30 THEN 'Alto' END            | Clasificar datos en consulta         |
+--| 49 | DISTINCT                   | Valores únicos                           | SELECT DISTINCT id_tipo_prev                      | Eliminar duplicados                  |
 -- ============================================
 -- PARTE 3: SELECT BÁSICO + WHERE + ORDER BY + GROUP BY + HAVING
 -- ============================================
