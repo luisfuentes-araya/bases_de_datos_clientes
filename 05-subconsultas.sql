@@ -1,3 +1,18 @@
+--| #  | Concepto                   | Qué hace                          | Ejemplo                                               | Para qué sirve                          |
+--| -- | -------------------------- | --------------------------------- | ----------------------------------------------------- | --------------------------------------- |
+--| 59 | Subconsulta en WHERE       | Filtrar por valor calculado       | WHERE salario > (SELECT AVG(...))                     | Clientes con salario sobre promedio     |
+--| 60 | Subconsulta en FROM        | Tabla derivada/temporal           | FROM (SELECT ...) AS sub                              | Usar resultado de SELECT como tabla     |
+--| 61 | Subconsulta en SELECT      | Columna calculada                 | SELECT ..., (SELECT AVG(...)) AS promedio             | Mostrar promedio junto al dato          |
+--| 62 | Subconsulta correlacionada | Depende de consulta externa       | WHERE salario > (SELECT AVG(...) WHERE tipo = c.tipo) | Comparar con promedio de SU grupo       |
+--| 63 | IN con subconsulta         | Lista de valores dinámicos        | WHERE id_comuna IN (SELECT id_comuna FROM ...)        | Filtrar por resultados de otra consulta |
+--| 64 | NOT IN con subconsulta     | Excluir valores dinámicos         | WHERE id_tipo NOT IN (SELECT id FROM ...)             | Excluir ciertos tipos                   |
+--| 65 | EXISTS                     | Verificar si existe               | WHERE EXISTS (SELECT 1 FROM ... WHERE ...)            | Clientes con afiliación                 |
+--| 66 | NOT EXISTS                 | Verificar si NO existe            | WHERE NOT EXISTS (SELECT 1 FROM ...)                  | Clientes sin afiliación                 |
+--| 67 | ANY                        | Comparar con ALGUNO               | WHERE salario > ANY (SELECT salario FROM ...)         | Mayor que al menos uno                  |
+--| 68 | ALL                        | Comparar con TODOS                | WHERE salario > ALL (SELECT salario FROM ...)         | Mayor que el máximo                     |
+--| 69 | Subconsultas anidadas      | 3+ niveles de anidamiento         | WHERE ... IN (SELECT ... WHERE ... IN (SELECT ...))   | Consultas complejas multi-nivel         |
+--| 70 | Subconsulta vs JOIN        | Dos enfoques para mismo resultado | Subconsulta o JOIN para filtrar por promedio          | Elegir según legibilidad                |
+
 -- ============================================
 -- PARTE 5: SUBCONSULTAS (Subqueries anidadas)
 -- ============================================
